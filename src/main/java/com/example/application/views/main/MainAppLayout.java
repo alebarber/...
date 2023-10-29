@@ -10,6 +10,7 @@ import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 @Route("main")
 public class MainAppLayout extends AppLayout {
@@ -17,7 +18,7 @@ public class MainAppLayout extends AppLayout {
     public MainAppLayout() {
         DrawerToggle toggle = new DrawerToggle();
 
-        H1 title = new H1("MyApp");
+        H1 title = new H1("PhoneNet");
         title.getStyle().set("font-size", "var(--lumo-font-size-l)")
                 .set("margin", "0");
 
@@ -26,8 +27,8 @@ public class MainAppLayout extends AppLayout {
         addToDrawer(tabs);
         addToNavbar(toggle, title);
 
-        Span content = new Span("Contenido de prueba");
-        setContent(content);
+        VerticalLayout appContent = createContent();
+        setContent(appContent);
     }
 
     private Tabs getTabs() {
@@ -54,5 +55,14 @@ public class MainAppLayout extends AppLayout {
         link.setTabIndex(-1);
 
         return new Tab(link);
+    }
+
+    // Para tarifas
+    private VerticalLayout createContent() {
+        VerticalLayout content = new VerticalLayout();
+
+        
+
+        return content;
     }
 }
