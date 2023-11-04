@@ -10,9 +10,13 @@ import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
+
+import jakarta.annotation.security.PermitAll;
+
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
-@Route("main")
+@Route("")
+@PermitAll
 public class MainAppLayout extends AppLayout {
 
     public MainAppLayout() {
@@ -60,9 +64,7 @@ public class MainAppLayout extends AppLayout {
     // Para tarifas
     private VerticalLayout createContent() {
         VerticalLayout content = new VerticalLayout();
-
-        
-
+        content.add(new Span("Hello world"));
         return content;
     }
 }

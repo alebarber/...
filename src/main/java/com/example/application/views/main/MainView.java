@@ -8,7 +8,7 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@PageTitle("Main")
+@PageTitle("main")
 @Route(value = "test")
 public class MainView extends HorizontalLayout {
 
@@ -28,5 +28,4 @@ public class MainView extends HorizontalLayout {
 
         add(name, sayHello);
     }
-
 }
